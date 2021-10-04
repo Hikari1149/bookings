@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Hikari1149/go-web-example/pkg/config"
-	"github.com/Hikari1149/go-web-example/pkg/models"
-	"github.com/Hikari1149/go-web-example/pkg/render"
+	"github.com/Hikari1149/bookings/pkg/config"
+	"github.com/Hikari1149/bookings/pkg/models"
+	"github.com/Hikari1149/bookings/pkg/render"
 )
 
 var Repo *Repository

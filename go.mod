@@ -1,4 +1,4 @@
-module github.com/Hikari1149/go-web-example
+module github.com/Hikari1149/bookings
 
 go 1.17
 

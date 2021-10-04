@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Hikari1149/go-web-example/pkg/config"
-	"github.com/Hikari1149/go-web-example/pkg/handlers"
-	"github.com/Hikari1149/go-web-example/pkg/render"
+	"github.com/Hikari1149/bookings/pkg/config"
+	"github.com/Hikari1149/bookings/pkg/handlers"
+	"github.com/Hikari1149/bookings/pkg/render"
 	"github.com/alexedwards/scs/v2"
 )
 
