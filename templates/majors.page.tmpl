@@ -1,0 +1,88 @@
+{{template "base" .}}
+
+
+{{define "content"}}
+
+<div class="container">
+		
+
+
+
+
+
+
+
+
+    <div class="row">
+
+
+  <div class="row">
+    
+    <div class="col">
+      <img src="/static/images/marjors-suite.png" class="img-fluid img-thumbnail mx-auto d-block room-image" alt="room-img">   
+    </div>
+   
+  </div>  
+
+
+        <div class="col">
+            <h1 class="text-center mt-4">General's Quarters</h1>
+            <p>
+                Your home away from home, set on the majestic waters of the Atlantic Ocean.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean.
+
+
+            </p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col text-center">
+            <a href="#!" class="btn btn-success" id="check-availability-button">Check Availiable</a>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+{{end}}
+
+
+
+{{define "js"}}
+
+    <script>
+         document.getElementById("check-availability-button").addEventListener("click",function(){
+    let html = `
+    <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+        <div class="row">
+          <div class="col">
+            <div class="row" id="reservation-dates-modal">
+              
+            
+              <div class="col">
+                <input disabled type="text" required class="form-control" name="start" id="start" placeholder="Arrival">
+              </div>
+              <div class="col">
+                <input disabled type="text" required class="form-control" name="end" id="end" placeholder="Departure">
+              </div>
+            </div>
+          </div>
+         </div>
+    </form>
+  
+    `
+  
+  
+    attention.custom({msg:html,title:"Choose Date"})
+  })
+
+    </script>
+
+{{end}}
