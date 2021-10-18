@@ -1,0 +1,23 @@
+mode: set
+github.com/Hikari1149/bookings/internal/render/render.go:23.40,26.2 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:28.84,36.2 5 1
+github.com/Hikari1149/bookings/internal/render/render.go:39.105,42.18 2 1
+github.com/Hikari1149/bookings/internal/render/render.go:49.2,50.9 2 1
+github.com/Hikari1149/bookings/internal/render/render.go:55.2,62.16 5 1
+github.com/Hikari1149/bookings/internal/render/render.go:66.2,66.12 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:42.18,45.3 1 0
+github.com/Hikari1149/bookings/internal/render/render.go:45.8,47.3 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:50.9,53.3 2 0
+github.com/Hikari1149/bookings/internal/render/render.go:62.16,65.3 2 0
+github.com/Hikari1149/bookings/internal/render/render.go:71.67,77.16 3 1
+github.com/Hikari1149/bookings/internal/render/render.go:80.2,80.29 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:109.2,109.21 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:77.16,79.3 1 0
+github.com/Hikari1149/bookings/internal/render/render.go:80.29,86.17 3 1
+github.com/Hikari1149/bookings/internal/render/render.go:90.3,92.17 2 1
+github.com/Hikari1149/bookings/internal/render/render.go:96.3,96.23 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:106.3,106.21 1 1
+github.com/Hikari1149/bookings/internal/render/render.go:86.17,88.4 1 0
+github.com/Hikari1149/bookings/internal/render/render.go:92.17,94.4 1 0
+github.com/Hikari1149/bookings/internal/render/render.go:96.23,100.18 2 1
+github.com/Hikari1149/bookings/internal/render/render.go:100.18,102.5 1 0

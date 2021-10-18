@@ -1,0 +1,19 @@
+mode: set
+github.com/Hikari1149/bookings/internal/forms/errors.go:6.44,8.2 1 1
+github.com/Hikari1149/bookings/internal/forms/errors.go:11.42,13.18 2 1
+github.com/Hikari1149/bookings/internal/forms/errors.go:16.2,16.14 1 1
+github.com/Hikari1149/bookings/internal/forms/errors.go:13.18,15.3 1 0
+github.com/Hikari1149/bookings/internal/forms/forms.go:17.29,19.2 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:21.43,22.31 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:22.31,24.35 2 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:24.35,26.4 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:31.57,33.21 2 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:37.2,37.13 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:33.21,36.3 2 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:40.33,45.2 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:48.39,50.13 2 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:54.2,54.13 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:50.13,53.3 2 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:58.43,59.40 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:63.2,63.13 1 1
+github.com/Hikari1149/bookings/internal/forms/forms.go:59.40,62.3 2 1
