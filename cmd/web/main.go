@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/Hikari1149/bookings/internal/config"
 	"github.com/Hikari1149/bookings/internal/handlers"
+	"github.com/Hikari1149/bookings/internal/helpers"
 	"github.com/Hikari1149/bookings/internal/models"
 	"github.com/Hikari1149/bookings/internal/render"
 	"github.com/alexedwards/scs/v2"
@@ -18,6 +20,8 @@ const portNumber = ":8080"
 
 var app config.AppConfig
 var session *scs.SessionManager
+var infoLog *log.Logger
+var errLog *log.Logger
 
 // main in the main application function
 func main() {
@@ -48,6 +52,13 @@ func run() error {
 	// change this to true when in production
 	app.InProduction = false
 
+	// set up logger
+	infoLog := log.New(os.Stdin, "INFO\t", log.Ldate|log.Ltime)
+	app.InfoLog = infoLog
+
+	errLog := log.New(os.Stdin, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+	app.ErrorLog = errLog
+
 	//
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
@@ -67,8 +78,8 @@ func run() error {
 
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)
-
 	render.NewTemplates(&app)
+	helpers.NewHelpers(&app)
 
 	return nil
 }

@@ -2,6 +2,7 @@ package render
 
 import (
 	"encoding/gob"
+	"log"
 	"net/http"
 	"os"
 	"testing"
@@ -22,7 +23,12 @@ func TestMain(m *testing.M) {
 
 	// change this to true when in production
 	testApp.InProduction = false
+	// set up logger
+	infoLog := log.New(os.Stdin, "INFO\t", log.Ldate|log.Ltime)
+	testApp.InfoLog = infoLog
 
+	errLog := log.New(os.Stdin, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+	testApp.ErrorLog = errLog
 	//
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
