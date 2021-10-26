@@ -6,22 +6,27 @@ import (
 	"net/http"
 
 	"github.com/Hikari1149/bookings/internal/config"
+	"github.com/Hikari1149/bookings/internal/driver"
 	"github.com/Hikari1149/bookings/internal/forms"
 	"github.com/Hikari1149/bookings/internal/helpers"
 	"github.com/Hikari1149/bookings/internal/models"
 	"github.com/Hikari1149/bookings/internal/render"
+	repository "github.com/Hikari1149/bookings/internal/respository"
+	"github.com/Hikari1149/bookings/internal/respository/dbrepo"
 )
 
 var Repo *Repository
 
 type Repository struct {
 	App *config.AppConfig
+	DB  repository.DatabaseRepo
 }
 
 // NewRepo creates a new repository
-func NewRepo(a *config.AppConfig) *Repository {
+func NewRepo(a *config.AppConfig, db *driver.DB) *Repository {
 	return &Repository{
 		App: a,
+		DB:  dbrepo.NewPostGresRepo(db.SQL, a),
 	}
 
 }
