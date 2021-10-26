@@ -49,6 +49,10 @@ func run() (*driver.DB, error) {
 
 	// session ?
 	gob.Register(models.Reservation{})
+	gob.Register(models.User{})
+	gob.Register(models.Room{})
+	gob.Register(models.Restriction{})
+	gob.Register(models.RommRestriction{})
 
 	// change this to true when in production
 	app.InProduction = false
@@ -88,7 +92,7 @@ func run() (*driver.DB, error) {
 
 	repo := handlers.NewRepo(&app, db)
 	handlers.NewHandlers(repo)
-	render.NewTemplates(&app)
+	render.NewRender(&app)
 	helpers.NewHelpers(&app)
 
 	return db, nil
