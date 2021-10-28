@@ -53,10 +53,10 @@ type RommRestriction struct {
 	UpdatedAt     time.Time
 	StartDate     time.Time
 	EndDate       time.Time
-	RoomID        string
+	RoomID        int
 	Room          Room
-	ReservationID string
+	ReservationID int
 	Reservation   Reservation
-	RestrictID    string
+	RestrictID    int
 	Restriction   Restriction
 }
