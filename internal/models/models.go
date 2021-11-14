@@ -69,4 +69,5 @@ type MailData struct {
 	From     string
 	Subuject string
 	Congtent string
+	Template string
 }

@@ -1,7 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"io/ioutil"
 	"log"
+	"strings"
 	"time"
 
 	"github.com/Hikari1149/bookings/internal/models"
@@ -41,7 +44,18 @@ func sendMsg(m models.MailData) {
 	email := mail.NewMSG()
 	email.SetFrom(m.From).AddTo(m.To).SetSubject(m.Subuject)
 	// email.SetBody(mail.TextHTML, "Hello, <strong>HIkari</strong> !")
-	email.SetBody(mail.TextHTML, m.Congtent)
+
+	if m.Template == "" {
+		email.SetBody(mail.TextHTML, m.Congtent)
+	} else {
+		data, err := ioutil.ReadFile(fmt.Sprintf("./email-templates/%s", m.Template))
+		if err != nil {
+			app.ErrorLog.Println(err)
+		}
+		mailTemplate := string(data)
+		msgToSend := strings.Replace(mailTemplate, "[%body%]", m.Congtent, 1)
+		email.SetBody(mail.TextHTML, msgToSend)
+	}
 
 	err = email.Send(client)
 	if err != nil {
