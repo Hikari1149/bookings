@@ -1,0 +1,58 @@
+{{template "base" .}}
+
+
+{{define "content"}}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>This is Login page</h1>
+
+            <form>
+              <div class="form-group mt-5">
+                <label for="email">Email:</label>
+
+                {{with .Form.Errors.Get "Email"}}
+                    <label class="text-danger">{{.}}</label>
+                {{end}}
+                <input
+                 type="email" 
+                 name="email"
+                 id="email" 
+                 required autocomplete="off"
+                 class='form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}'
+                 value=""
+                >
+             </div>
+
+
+             <div class="form-group mt-5">
+              <label for="password">Password:</label>
+
+              {{with .Form.Errors.Get "password"}}
+                  <label class="text-danger">{{.}}</label>
+              {{end}}
+              <input
+               type="password" 
+               name="password"
+               id="password" 
+               required autocomplete="off"
+               class='form-control {{with .Form.Errors.Get "password"}} is-invalid {{end}}'
+               value=""
+              >
+           </div>
+
+
+           <hr>
+
+            <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        
+
+
+        
+        </div>
+    </div>
+</div>
+
+{{end}}
