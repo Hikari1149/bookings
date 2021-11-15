@@ -8,7 +8,10 @@
         <div class="col">
             <h1>This is Login page</h1>
 
-            <form>
+            <form method="post" action="/user/login" novalidate>
+
+
+              <input type="hidden" value="{{.CSRFToken}}" name="csrf_token">
               <div class="form-group mt-5">
                 <label for="email">Email:</label>
 
